@@ -25,7 +25,7 @@
                                             <h3>{{t "Monthly"}}</h3>
                                             {{#get "tiers" filter="slug:monthly" limit="1"}}
                                                 {{#foreach tiers}}
-                                                    <div class="pricing"><strong>{{price_monthly price currency=currency}}</strong> / {{t "month"}}</div>
+                                                    <div class="pricing"><strong>{{price monthly_price currency=currency}}</strong> / {{t "month"}}</div>
                                                 {{/foreach}}
                                             {{/get}}
                                             <div class="checkout-plan-content">
@@ -44,7 +44,7 @@
                                             <h3>Yearly</h3>
                                             {{#get "tiers" filter="slug:yearly" limit="1"}}
                                                 {{#foreach tiers}}
-                                                    <div class="pricing"><strong>{{price_yearly price currency=currency}}</strong> / {{t "year"}}</div>
+                                                    <div class="pricing"><strong>{{price yearly_price currency=currency}}</strong> / {{t "year"}}</div>
                                                 {{/foreach}}
                                             {{/get}}
                                             <div class="checkout-plan-content">
