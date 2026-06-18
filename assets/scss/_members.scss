@@ -11,7 +11,7 @@
 		padding: 15px 30px;
 		font-size: 1rem;
 		font-weight: normal;
-		font-family: $main_font;
+		font-family: var(--gh-font-body, var(--theme-font-body));
 		background: $white;
 		border-radius: 0 3px 3px 0;
 		color: $dark_grey;
