@@ -5,8 +5,7 @@
     "version": "3.0.0",
     "license": "GNU General Public License, Version 2",
     "engines": {
-        "ghost": ">=3.0.0",
-        "ghost-api": "v3"
+        "ghost": ">=3.0.0"
     },
     "author": {
         "name": "Haunted Themes",
