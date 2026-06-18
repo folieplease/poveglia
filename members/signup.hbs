@@ -23,7 +23,11 @@
                                     <div class="col-md-4 ml-auto">
                                         <div class="checkout-plan">
                                             <h3>{{t "Monthly"}}</h3>
-                                            <div class="pricing"><span>$</span><strong>{{@price.monthly}}</strong> / {{t "month"}}</div>
+                                            {{#get "tiers" filter="slug:monthly" limit="1"}}
+                                                {{#foreach tiers}}
+                                                    <div class="pricing"><strong>{{price_monthly price currency=currency}}</strong> / {{t "month"}}</div>
+                                                {{/foreach}}
+                                            {{/get}}
                                             <div class="checkout-plan-content">
                                                 <ul>
                                                     <li><i class="fas fa-check"></i>{{t "Full access to all private posts"}}</li>
@@ -31,14 +35,18 @@
                                                     <li><i class="fas fa-check"></i>{{t "Support independent publishing"}}</li>
                                                     <li><i class="fas fa-check"></i>{{t "Simple, secure card payment"}}</li>
                                                 </ul>
-                                                <a class="btn btn-blue" href="javascript:void(0)" data-members-plan="Monthly">{{t "Choose this plan"}}</a>
+                                                <a class="btn btn-blue" href="javascript:void(0)" data-members-plan="{{slug}}">{{t "Choose this plan"}}</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-4 mr-auto">
                                         <div class="checkout-plan">
                                             <h3>Yearly</h3>
-                                            <div class="pricing"><span>$</span><strong>{{@price.yearly}}</strong> / {{t "year"}}</div>
+                                            {{#get "tiers" filter="slug:yearly" limit="1"}}
+                                                {{#foreach tiers}}
+                                                    <div class="pricing"><strong>{{price_yearly price currency=currency}}</strong> / {{t "year"}}</div>
+                                                {{/foreach}}
+                                            {{/get}}
                                             <div class="checkout-plan-content">
                                                 <ul>
                                                     <li><i class="fas fa-check"></i>{{t "Full access to all private posts"}}</li>
@@ -47,7 +55,7 @@
                                                     <li><i class="fas fa-check"></i>{{t "Simple, secure card payment"}}</li>
                                                     <li><i class="fas fa-check"></i>{{t "One easy payment instead of 12!"}}</li>
                                                 </ul>
-                                                <a class="btn btn-blue" href="javascript:void(0)" data-members-plan="Yearly">{{t "Choose this plan"}}</a>
+                                                <a class="btn btn-blue" href="javascript:void(0)" data-members-plan="{{slug}}">{{t "Choose this plan"}}</a>
                                             </div>
                                         </div>
                                     </div>
